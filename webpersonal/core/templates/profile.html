@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WebApp | Perfil</title>
+    <!-- Enlaces a hojas de estilo (CSS) y fuentes -->
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                    <li><a href="{% url 'profile' %}">Perfil</a></li>
+                    <li><a href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="personal-info">
+            <div class="container">
+                <h1>Información Personal</h1>
+                <div class="personal-details">
+                    <p><strong>Nombre:</strong> Franco Salvioli</p>
+                    <p><strong>Dirección:</strong> Caseros - Buenos Aires - Argentina</p>
+                    <p><strong>Teléfono:</strong> 221-306-0489</p>
+                    <p><strong>Correo Electrónico:</strong> salvioli.franco@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trabajos">
+            <div class="container">
+                <h2>Historial de trabajos</h2>
+                <ul class="work-list">
+                    <li>
+                        <h3>Programador de BBDD</h3>
+                        <p>Municipalidad de 3 de Febrero - Febrero 2022 / Actualidad</p>
+                        <p>Control de la base de datos de PostgreSQL de la municipalidad de 3 de Febrero. Optimización de querys y Stored Procedures. Creación de Funciones y Stored Procedures para mejorar la eficiencia en las busquedas web y dentro del sector. Manejo de datos con Python. Y creación de scripts con Python para facilitar el manejo de información hacia la base de datos y desde la misma. </p>
+                    </li>
+                    <li>
+                        <h3>Data Entry</h3>
+                        <p>Ministerio de Educación de CABA - Enero 2021 / Febrero 2022</p>
+                        <p>Manejo de datos en el sector de educación estatal. Manejo de excel para recopilar información de los alumnos, maestros y docentes de la Ciudad de Buenos Aires. Capacitaciones a maestros de primaria y creación de videos para las mismas. </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2>Formación Académica</h2>
+                <ul class="education-list">
+                    <li>
+                        <h3>Universidad de Hurlingham</h3>
+                        <p>Tecnicatura en programación - Actualmente estudiando</p>
+                    </li>
+                    <li>
+                        <h3>Curso Maestro de Python</h3>
+                        <p>Finalizado</p>
+                        <div id="image-container">
+                            <img src="{% static 'images/cursoUdemy_1.jpg' %}" alt="Imagen 1" style="width: 600px; height: 400px;" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="knowledge">
+            <div class="container">
+                <h2>Conocimientos</h2>
+                <ul class="knowledge-list">
+                    <li>SQL PostgreSQL</li>
+                    <li>Python</li>
+                    <li>Django Framework</li>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>MySQL</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="lenguaje">
+            <div class="container">
+                <h2>Idiomas</h2>
+                <ul class="knowledge-list">
+                    <li>Inglés</li>
+                    <li>Portugués</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/salviolifranco/" target="_blank">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/franco-salvioli-8040b8164/" target="_blank">
+                    <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com/SalvioliFranco" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

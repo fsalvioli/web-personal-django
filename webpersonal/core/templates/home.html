@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WebApp | Inicio</title>
+    <!-- Enlaces a hojas de estilo (CSS) y fuentes -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                    <li><a href="{% url 'profile' %}">Perfil</a></li>
+                    <li><a href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="content background-image">
+        <section class="hero">
+          <div class="container">
+            <h1 class="glowing-text">Franco Salvioli</h1>
+            <p class="animated-text">Programador Python Backend</p>
+          </div>
+        </section>
+        <div class="background-overlay"></div>
+        <img src="{% static 'images/MyAppImagen.jpg' %}" alt="Fondo" class="background-blur">
+        <div class="non-blur-circle"></div> <!-- Agrega esta línea -->
+      </main>
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/salviolifranco/" target="_blank">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/franco-salvioli-8040b8164/" target="_blank">
+                    <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com/SalvioliFranco" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

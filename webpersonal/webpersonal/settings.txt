@@ -1,0 +1,2 @@
+echo "EMAIL_HOST_USER=salvioli.franco@gmai.com" >> ~/.bashrc
+echo "EMAIL_HOST_PASSWORD=jruu qqbw jkyp zkwo" >> ~/.bashrc

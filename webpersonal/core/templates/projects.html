@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WebApp | Proyectos</title>
+    <!-- Enlaces a hojas de estilo (CSS) y fuentes -->
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                    <li><a href="{% url 'profile' %}">Perfil</a></li>
+                    <li><a href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="personal-info">
+            <div class="container">
+                <h1>Proyectos</h1>
+                <div class="personal-details">
+                    <p><strong>Aplicación Web:</strong> Registro de Discursos</p>
+                    <p><strong>Aplicación Web:</strong> CV en línea</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trabajos">
+            <div class="container">
+                <h2>Historial de Proyectos</h2>
+                <ul class="work-list">
+                    {% for project in projects %}
+                        <li>
+                            <h3>{{ project.title }}</h3>
+                            <p>{{ project.descripcion | safe }}</p>
+                            <p>Fecha de Creación: {{ project.get_created_at}}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/salviolifranco/" target="_blank">
+                    <img src="{% static 'images/instagram.png' %}" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/franco-salvioli-8040b8164/" target="_blank">
+                    <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com/SalvioliFranco" target="_blank">
+                    <img src="{% static 'images/twitter.png' %}" alt="Twitter">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

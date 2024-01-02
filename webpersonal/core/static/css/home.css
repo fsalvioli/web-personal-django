@@ -1,0 +1,164 @@
+/* Reset de estilos y estilos base */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8f8f8; /* Gris neutro */
+    color: #fff;
+    min-height: 100vh; /* Mínimo 100% de la altura de la ventana */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Encabezado */
+header {
+    background-color: darkslategray; /* Verde cemento */
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: right;
+    padding: 20px 0;
+}
+
+header {
+    height: 60px; /* Altura fija del header */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Altura del header */
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Contenido principal */
+.content {
+    text-align: center;
+    /*background-color: transparent;*/
+    height: calc(100vh - 120px); /* Resta la altura del header y el footer */
+    margin-top: 60px; /* Igual a la altura del header */
+    margin: 0; /* Agrega esta línea para eliminar cualquier margen */
+    padding: 50px 0;
+    position: relative; /* Agrega esta línea para eliminar cualquier padding */
+}
+
+
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+    filter: blur(5px); /* Ajusta el valor para controlar la intensidad del desenfoque */
+    z-index: -1; /* Coloca la imagen detrás del contenido principal */
+  }
+
+.hero h1 {
+    font-size: 50px;
+    color: black; /* Letras negras */
+}
+
+.hero p {
+    font-size: 24px;
+    color: black; /* Letras negras */
+}
+
+/* Clase CSS para el círculo no desenfocado */
+.non-blur-circle {
+    position: absolute;
+    top: 50%; /* Ajusta la posición según tus necesidades */
+    left: 50%; /* Ajusta la posición según tus necesidades */
+    transform: translate(-50%, -50%);
+    width: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 200px; /* Ajusta el tamaño del círculo según tus necesidades */
+    background: url('images/MyAppImagen.jpg') center center no-repeat; /* Cambia 'ruta-a-tu-imagen-rostros.jpg' por la ruta de la imagen de los rostros */
+    background-size: cover;
+    border-radius: 50%; /* Crea un círculo */
+    z-index: 1; /* Asegura que el círculo esté encima de la imagen con blur */
+}
+
+
+/* Footer */
+footer {
+    background-color: darkslategray; /* Verde cemento */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    height: 60px; /* Altura más pequeña del footer */
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px; /* Tamaño de fuente más pequeño */
+    transition: color 0.3s;
+}
+
+/* Tamaño más pequeño para las imágenes de las redes sociales */
+.social-icons img {
+    width: 24px; /* Ancho reducido */
+    height: 24px; /* Altura reducida */
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
